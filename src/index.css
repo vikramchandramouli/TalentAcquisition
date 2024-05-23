@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card_title .ant-card-head{
+    @apply !p-0
+}
+
+.card-footer .ant-card-body {
+   @apply !p-0;
+  }
+
+.candidate .ant-card-head{
+    @apply border-none
+}
