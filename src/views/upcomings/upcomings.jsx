@@ -24,7 +24,7 @@ export default function Upcomings(props) {
                <h1 className='text-small mt-1 font-light'>10 A.M to 11 A.M</h1>
              </Col>
              <Col span={5}>
-               <Button type='primary'>Details</Button>
+               <Button className='ml-1' type='primary'>Details</Button>
              </Col>
              <Col span={24} className="h-6"></Col>
              <Col span={6}>
@@ -39,7 +39,7 @@ export default function Upcomings(props) {
                <h1 className='text-small mt-1 font-light'>10 A.M to 11 A.M</h1>
              </Col>
              <Col span={5}>
-               <Button type='primary'>Details</Button>
+               <Button className='ml-1' type='primary'>Details</Button>
              </Col>
              <Col span={24} className="h-6"></Col>
              <Col span={6}>
@@ -54,7 +54,7 @@ export default function Upcomings(props) {
                <h1 className='text-small mt-1 font-light'>10 A.M to 11 A.M</h1>
              </Col>
              <Col span={5}>
-               <Button type='primary'>Details</Button>
+               <Button className='ml-1' type='primary'>Details</Button>
              </Col>
 
          </Row>

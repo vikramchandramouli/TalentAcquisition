@@ -27,6 +27,7 @@ export default function Full(props) {
         <Col xs={24} md={14}>
           <Application />
         </Col>
+        <Col xs={24} md={0} className="h-8"></Col>
         <Col xs={24} md={9}>
           <Assessment />
         </Col>
@@ -39,18 +40,18 @@ export default function Full(props) {
           <Candidatestatus />
         </Col>
         <Col xs={24} md={7} className="ml-4">
-          <Col xs={24}>
+          <Col xs={23}>
             {" "}
             <CalendarInfo />
           </Col>
-          <Col span={24}>
+          <Col span={23}>
             {" "}
             <Upcomings />
           </Col>
-          <Col span={24}>
+          <Col span={23}>
             <Activity />
           </Col>
-          <Col span={24}>
+          <Col span={23}>
             {" "}
             <Hiringcandidates />
           </Col>

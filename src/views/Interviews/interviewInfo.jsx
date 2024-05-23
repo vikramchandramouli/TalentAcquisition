@@ -33,11 +33,11 @@ export default function InterviewInfo(props) {
                 <h1 className="mt-3 text-center">John Smith</h1>
                 <h1 className="mt-1 text-center">Senior Python Developer</h1>
                 <Row className="mt-3">
-                  <Col span={12}>
+                  <Col span={12} className=" flex flex-col items-center">
                     <img className="h-5 w-5" src={Calendar} alt="Calendar"></img>
                     <span className="mt-2 text-sm text-[#0A66C2]">19th Feb 2024</span>
                   </Col>
-                  <Col span={12}>
+                  <Col span={12} className=" flex flex-col items-center">
                     <img className="h-5 w-5" src={Clock} alt="Clock"></img>
                     <span className="mt-2 text-sm text-[#0A66C2]">10.30 AM</span>
                   </Col>
@@ -94,11 +94,11 @@ export default function InterviewInfo(props) {
                 <h1 className="mt-3 text-center">Maria</h1>
                 <h1 className="mt-1 text-center">Senior Python Developer</h1>
                 <Row className="mt-3">
-                  <Col span={12}>
+                  <Col span={12} className=" flex flex-col items-center">
                     <img className="h-5 w-5" src={Calendar} alt="Calendar"></img>
                     <span className="mt-2 text-sm text-[#0A66C2]">19th Feb 2024</span>
                   </Col>
-                  <Col span={12}>
+                  <Col span={12} className=" flex flex-col items-center">
                     <img className="h-5 w-5" src={Clock} alt="Clock"></img>
                     <span className="mt-2 text-sm text-[#0A66C2]">10.30 AM</span>
                   </Col>

@@ -93,8 +93,8 @@ export default function Postedjobs(props) {
                           <Row>
                             <Col span={24} className="m-auto text-center">
                               <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF]">
-                                <h1 className="text-xl text-center pt-3 font-bold text-[#0A66C2]">
+                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
+                                <h1 className="text-xl text-center font-bold text-[#0A66C2]">
                                   258
                                 </h1>
                               </div>
@@ -139,8 +139,8 @@ export default function Postedjobs(props) {
                           <Row>
                             <Col span={24} className="m-auto text-center">
                               <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB]">
-                                <h1 className="text-xl text-center pt-3 font-bold  text-white">
+                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
+                                <h1 className="text-xl text-center font-bold  text-white">
                                   258
                                 </h1>
                               </div>
@@ -185,8 +185,8 @@ export default function Postedjobs(props) {
                           <Row>
                             <Col span={24} className="m-auto text-center">
                               <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0]">
-                                <h1 className="text-xl text-center pt-3 font-bold  text-white">
+                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
+                                <h1 className="text-xl text-center font-bold  text-white">
                                   258
                                 </h1>
                               </div>
@@ -228,8 +228,8 @@ export default function Postedjobs(props) {
                           <Row>
                             <Col span={24} className="m-auto text-center">
                               <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2]">
-                                <h1 className="text-xl text-center pt-3 font-bold  text-white">
+                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
+                                <h1 className="text-xl text-center font-bold  text-white">
                                   258
                                 </h1>
                               </div>

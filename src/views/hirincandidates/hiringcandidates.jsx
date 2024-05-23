@@ -26,7 +26,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
              <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -40,7 +40,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
              <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -54,7 +54,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
              <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -68,7 +68,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
              <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -82,7 +82,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
              <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
              </Col>
 
          </Row>
