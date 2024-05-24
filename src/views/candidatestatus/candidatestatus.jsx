@@ -1,7 +1,7 @@
 import { Card, Row, Col, Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import filter from "../../assets/filter.png";
-import React, { useState } from "react";
+import React, { useState,useMemo } from "react";
 import { AgGridReact } from "ag-grid-react"; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the grid
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the grid
@@ -9,26 +9,33 @@ import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied
 export default function Candidatestatus(props) {
   const Search = Input;
   const [rowData, setRowData] = useState([
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { Jobid: "#001", Name: "John Doe", Position: "Designer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
+    { Jobid: "#002", Name: "John Smith", Position: "Angular Developer", level1: "6/10",level2:"5/10",level3:"5/10",level4:"8/10",totalmarks:"24/40",status:"Hired",action:"" },
+    { Jobid: "#003", Name: "Johnson Smith", Position: "Python Developer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
+    { Jobid: "#004", Name: "Stella", Position: "Python Developer", level1: "6/10",level2:"2/10",level3:"",level4:"",totalmarks:"",status:"Active",action:"" },
+    { Jobid: "#005", Name: "Randy", Position: "IOS Developer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
+    { Jobid: "#006", Name: "John Doe", Position: "Junior Designer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
   ]);
 
   const [colDefs, setColDefs] = useState([
-    { field: "make" },
-    { field: "model" },
-    { field: "price" },
-    { field: "electric" },
+    { field: "Jobid",headerName:"Job ID" },
+    { field: "Name",headerName:"Name" },
+    { field: "Position",headerName:"Position" },
+    { field: "level1",headerName:"1st Level" },
+    { field: "level2",headerName:"2nd Level" },
+    { field: "level3",headerName:"3rd Level" },
+    { field: "level4",headerName:"4th Level" },
+    { field: "totalmarks",headerName:"Total Marks" },
+    { field: "status",headerName:"Status" },
+    { field: "actions",headerName:"Actions" },
+
   ]);
+
+  const autoSizeStrategy = {
+    type: 'fitGridWidth',
+    defaultMinWidth: 100,
+
+};
 
   return (
     <>
@@ -77,7 +84,7 @@ export default function Candidatestatus(props) {
               className="ag-theme-quartz" // applying the grid theme
               style={{ height: 420 }} // the grid will fill the size of the parent container
             >
-              <AgGridReact rowData={rowData} columnDefs={colDefs} />
+              <AgGridReact rowData={rowData} columnDefs={colDefs} autoSizeStrategy={autoSizeStrategy} />
             </div>
           </Col>
         </Row>
