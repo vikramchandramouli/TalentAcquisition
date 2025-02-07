@@ -26,7 +26,6 @@ export default function InterviewInfo(props) {
   };
 
 
-  console.log(dayjs(value1,"HH:mm"))
   return (
     <>
       <Card

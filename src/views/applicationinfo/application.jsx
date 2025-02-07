@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState ,useEffect} from "react";
 import {
   ComposedChart,
   Line,
@@ -15,6 +15,8 @@ import {
 
 import { Card, Row, Col, Select } from "antd";
 const Application = (props) => {
+
+  const[isDark,setIsDark]=useState(localStorage.getItem("theme") === "dark")
 
   
   const data = [
@@ -46,7 +48,17 @@ const Application = (props) => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
 
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+    return () => observer.disconnect();
+}, []);
+
+console.log("dark",isDark)
   return (
     <>
       <Card
@@ -79,8 +91,8 @@ const Application = (props) => {
             }}
             
           >
-            <XAxis dataKey="Month" tick={{fill:"white"}} />
-            <YAxis tick={{fill:"white"}}/>
+            <XAxis dataKey="Month" tick={{fill:isDark?"white":"black"}} />
+            <YAxis tick={{fill:isDark?"white":"black"}}/>
             <Tooltip />
             <Bar dataKey="Applied" fill="#ff7300" dot={false} />
             <Bar dataKey="Processed" fill="#413ea0" />
