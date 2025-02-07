@@ -101,7 +101,7 @@ export default function Hiringcandidates(props) {
         open={isModalOpen}
         footer={null}
         className="assessmentModal"
-        width={"35%"}
+        width={"40%"}
         title={
           <>
             <h1 className="text-black dark:!text-white font-bold text-3xl">
@@ -111,14 +111,14 @@ export default function Hiringcandidates(props) {
         }
         onCancel={() => setIsModalOpen(false)}
       >
-        <div className="m-5">
+        <div className="m-3">
           <Row>
             <Col span={24}>
                 {candidates?.map((data,i) => {
                   return (
                     <div key={i}>
                     <Row className="m-2 text-black dark:!text-white">
-                    <Col span={6}>
+                    <Col span={4}>
              <div className='h-14 w-14 rounded-full bg-white text-center'>
                <img src={data?.image}></img>
                </div>
@@ -129,7 +129,7 @@ export default function Hiringcandidates(props) {
                <h1 className='text-small mt-1 font-light'>{data?.hiredBy}</h1>
              </Col>
              <Col span={3}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] dark:!border-gray-400">Details</Button>
              </Col>
                       </Row>
                     </div>
