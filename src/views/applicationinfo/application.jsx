@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   ComposedChart,
   Line,
@@ -16,7 +16,6 @@ import {
 import { Card, Row, Col, Select } from "antd";
 const Application = (props) => {
 
-  const [themeColor,setThemeColor]=useState(localStorage.getItem("theme"))
   
   const data = [
     {
@@ -46,6 +45,7 @@ const Application = (props) => {
       Processed: 1108,
     }
   ];
+
 
   return (
     <>
@@ -79,7 +79,7 @@ const Application = (props) => {
             }}
             
           >
-            <XAxis dataKey="Month" tick={{fill: themeColor === "light"? "black":"white"}} />
+            <XAxis dataKey="Month" tick={{fill:"white"}} />
             <YAxis tick={{fill:"white"}}/>
             <Tooltip />
             <Bar dataKey="Applied" fill="#ff7300" dot={false} />

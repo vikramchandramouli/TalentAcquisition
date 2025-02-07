@@ -44,3 +44,15 @@
 .assessmentModal .ant-modal-body{
     @apply !pl-5
 }
+
+.ant-picker input::placeholder{
+    @apply dark:!text-white text-black
+}
+
+.ant-picker input{
+    @apply dark:!text-white text-black
+}
+
+.ant-picker .ant-picker-suffix{
+    @apply dark:!text-white text-black
+}

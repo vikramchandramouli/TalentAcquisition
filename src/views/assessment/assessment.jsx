@@ -92,10 +92,10 @@ export default function Assessment(props) {
           </Col>
 
           {/* Button */}
-          <Col span={12} className="mt-3 text-black dark:!text-white ">
+          <Col span={12} className="mt-3 text-black ">
             <Button
               shape="round"
-              className="bg-white font-medium float-end"
+              className="bg-white dark:!bg-gray-400/20 dark:!border-gray-400/20 dark:!shadow-gray !shadow-lg dark:!text-white font-medium float-end"
               onClick={() => setOpenModal(!openModal)}
             >
               View Details
@@ -113,7 +113,7 @@ export default function Assessment(props) {
       <Modal
         open={openModal}
         footer={null}
-        className="assessmentModal  "
+        className="assessmentModal"
         width={"50%"}
         title={
           <>
@@ -128,16 +128,16 @@ export default function Assessment(props) {
           <Row>
             <Col span={24}>
               <ul className="list-disc">
-                {Points?.map((data) => {
+                {Points?.map((data,i) => {
                   return (
-                    <>
+                    <div key={i}>
                       <li className="text-black dark:!text-white font-bold">
                         {data?.title}
                       </li>
                       <p className="p-2 text-black dark:!text-white">
                         {data?.description}
                       </p>
-                    </>
+                      </div>
                   );
                 })}
               </ul>
