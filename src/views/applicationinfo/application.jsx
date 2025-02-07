@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ComposedChart,
   Line,
@@ -15,113 +15,75 @@ import {
 
 import { Card, Row, Col, Select } from "antd";
 const Application = (props) => {
+
+  const [themeColor,setThemeColor]=useState(localStorage.getItem("theme"))
+  
   const data = [
     {
-      name: "Page A",
-      uv: 590,
-      pv: 800,
-      amt: 1400,
-      cnt: 490,
+      Month: "January",
+      Applied: 800,
+      Processed: 590,
     },
     {
-      name: "Page B",
-      uv: 868,
-      pv: 967,
-      amt: 1506,
-      cnt: 590,
+      Month: "February",
+      Processed: 868,
+      Applied: 967,
+
     },
     {
-      name: "Page C",
-      uv: 1397,
-      pv: 1098,
-      amt: 989,
-      cnt: 350,
+      Month: "March",
+      Applied: 1397,
+      Processed: 1098,
     },
     {
-      name: "Page D",
-      uv: 1480,
-      pv: 1200,
-      amt: 1228,
-      cnt: 480,
+      Month: "April",
+      Applied: 1480,
+      Processed: 1200,
     },
     {
-      name: "Page E",
-      uv: 1520,
-      pv: 1108,
-      amt: 1100,
-      cnt: 460,
-    },
-    {
-      name: "Page F",
-      uv: 1400,
-      pv: 680,
-      amt: 1700,
-      cnt: 380,
-    },
+      Month: "May",
+      Applied: 1520,
+      Processed: 1108,
+    }
   ];
 
   return (
     <>
       <Card
-      className=" shadow-2xl"
+      className="ant-card bg-white text-black dark:!text-white dark:!bg-gray-400/20 contact-card dark:!border-gray-400/20 !shadow-lg !shadow-[#c4c4b9] dark:!shadow-gray-400/20"
         title={
           <>
-            <Row>
-              <Col xs={24} md={7} className="mt-1">
+            <Row className="flex justify-between">
+              <Col md={10} className="mt-1">
                 {" "}
-                <span className=" text-base font-medium">Application's Info</span>
+                <h1 className="text-black dark:!text-white ">Application's Info</h1>
               </Col>
-              <Col xs={24} md={13} className="flex mt-2">
-                <div className="h-4 w-4 rounded-sm bg-[#277ACC]"></div>
-                <span className="ml-2 mr-2 text-small"> Received</span>
+              <Col md={14} className="flex mt-2 justify-end">
+                <div className="h-4 w-4 mx-1 mt-[3px] rounded-sm bg-[#ff7300]"></div>
+                <span className="mx-2 text-small  text-black dark:!text-white"> Applied</span>
 
-                <div className="h-4 w-4 ml-2 rounded-sm bg-[#002B55BD]"></div>
-                <span className="ml-2 text-small"> Processed</span>
-              </Col>
-              <Col xs={24} md={4} className="float-right">
-                {" "}
-                <Select
-                  defaultValue="Month"
-                  style={{
-                    width: 90,
-                  }}
-                  options={[
-                    {
-                        value: "Year",
-                        label: "Year",
-                      },
-                    {
-                      value: "Month",
-                      label: "Month",
-                    },
-                    {
-                      value: "Date",
-                      label: "Date",
-                    }
-                  ]}
-                />
+                <div className="h-4 w-4 mx-1 mt-[3px] rounded-sm bg-[#413ea0]"></div>
+                <span className="mx-2 text-small  text-black dark:!text-white"> Processed</span>
               </Col>
             </Row>
           </>
         }
       >
-        <ResponsiveContainer width="100%" height={150}>
+        <ResponsiveContainer width="100%" height={200}>
           <ComposedChart
-            width={500}
-            height={250}
             data={data}
             margin={{
               top: 0,
               right: 20,
               left: 20,
             }}
+            
           >
-            <CartesianGrid stroke="#f5f5f5" />
-            <XAxis dataKey="name" scale="band" />
-            <YAxis />
+            <XAxis dataKey="Month" tick={{fill: themeColor === "light"? "black":"white"}} />
+            <YAxis tick={{fill:"white"}}/>
             <Tooltip />
-            <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-            <Line type="monotone" dataKey="uv" stroke="#ff7300" dot={false} />
+            <Bar dataKey="Applied" fill="#ff7300" dot={false} />
+            <Bar dataKey="Processed" fill="#413ea0" />
           </ComposedChart>
         </ResponsiveContainer>
       </Card>

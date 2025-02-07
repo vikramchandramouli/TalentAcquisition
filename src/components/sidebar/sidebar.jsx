@@ -38,9 +38,6 @@ const Sidebar = () => {
       <Sider className="!min-w-20 !max-w-20 !w-20 rounded-tr-3xl !bg-white shadow-2xl">
         <Menu mode="inline" items={items} className="my-3"/>
       </Sider>
-      <Content>
-        <Full/>
-      </Content>
     </Layout>
   );
 };

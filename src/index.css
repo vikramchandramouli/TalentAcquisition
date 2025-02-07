@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.card_title .ant-card-head{
+/* .card_title .ant-card-head{
     @apply !p-0
 }
 
@@ -13,4 +13,34 @@
 
 .candidate .ant-card-head{
     @apply border-none
+} */
+
+.card_title .ant-card-actions{
+    @apply bg-white dark:!bg-gray-400/20 dark:!border-none
+}
+.card_title .ant-card-head{
+    @apply dark:!border-gray-400/20
+}
+
+.ant-tabs-tab {
+    @apply text-black dark:!text-white dark:!border-none
+}
+
+.ant-card-head{
+    @apply dark:!border-gray-400/20
+}
+
+.ag-header{
+    @apply dark:!bg-gray-400/20
+}
+
+.assessmentModal .ant-modal-header{
+    @apply dark:!bg-gray-400 p-2
+}
+.assessmentModal .ant-modal-content{
+    @apply dark:!bg-gray-400 !p-0
+}
+
+.assessmentModal .ant-modal-body{
+    @apply !pl-5
 }

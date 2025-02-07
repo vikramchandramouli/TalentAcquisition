@@ -9,12 +9,12 @@ export default function InterviewInfo(props) {
   return (
     <>
        <Card
-       className="shadow-2xl"
+       className="shadow-2xl bg-white dark:!bg-gray-400/20 contact-card dark:!border-gray-400/20 !shadow-lg !shadow-[#c4c4b9] dark:!shadow-gray-400/20"
       title={
-        <Row>
+        <Row gutter={[16,16]}>
           <Col span={24} className="h-6"></Col>
           <Col span={23} className="mb-2">
-            <h1 className="tracking-wide font-semibold">Today Interviews Meetings Info</h1>
+            <h1 className="tracking-wide font-semibold  text-black dark:!text-white">Today Interviews Meetings Info</h1>
           </Col>
           <Col span={1} className="mb-2">
             <MoreOutlined className="float-right font-bold text-lg" />
@@ -24,8 +24,8 @@ export default function InterviewInfo(props) {
     >
       <div className=" flex overflow-x-auto p-4">
         <div style={{ flex: '0 0 auto', marginRight: '1rem',maxWidth:600 }}>
-          <Card className="!p-0">
-            <Row>
+          <Card className="!p-0 bg-white dark:!bg-gray-400/20 dark:!border-gray-400/20">
+            <Row className="text-black dark:!text-white">
               <Col span={10} className="flex-col">
                 <div className="h-20 w-20 rounded-full m-auto">
                   <img src={user1} alt="User 1"></img>
@@ -85,8 +85,8 @@ export default function InterviewInfo(props) {
         </div>
 
         <div style={{ flex: '0 0 auto', marginRight: '1rem' ,maxWidth:600 }}>
-          <Card className="!p-0" style={{ minWidth: '300px' }}>
-            <Row>
+          <Card className="!p-0 bg-white dark:!bg-gray-400/20 dark:!border-gray-400/20" style={{ minWidth: '300px' }}>
+            <Row className="text-black dark:!text-white">
               <Col span={10} className="flex-col">
                 <div className="h-20 w-20 rounded-full m-auto">
                   <img src={user2} alt="User 2"></img>

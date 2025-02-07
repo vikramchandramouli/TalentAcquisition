@@ -11,24 +11,25 @@ export default function Postedjobs(props) {
   return (
     <>
       <Card
-      className=" shadow-2xl"
+      className="bg-white dark:!bg-gray-400/20 dark:!border-gray-400/20 !shadow-lg !shadow-[#c4c4b9] dark:!shadow-gray-400/20"
         title={
           <>
-            <Row className="mb-2">
-              <Col span={24} className="h-6"></Col>
-              <Col xs={8} md={5} className="mt-1">
+            <Row className="m-2 text-black dark:!text-white" gutter={[16,16]}>
+              <Col span={24} className="h-3"></Col>
+              <Col  span={5}>
                 <span className="text-xl">Posted Jobs</span>
               </Col>
-              <Col xs={4} md={3} className="mt-2">
-                <span className=" font-normal tracking-wide inline-block border-b-2 border-[#0A66C2] text-[#0A66C2]">
+              {/* <Col span={}></Col> */}
+              <Col  span={5} >
+                {/* <button className="mt-1 font-normal tracking-wide  border-b-2 border-[#0A66C2] text-[#0A66C2] cursor-pointer">
                   View All
-                </span>
+                </button> */}
               </Col>
-              <Col xs={0} md={5}></Col>
-              <Col xs={8} md={8}>
+              <Col span={3}></Col>
+              <Col span={7}>
                 <Search
                   placeholder="Search"
-                  className="w-64 h-10 rounded-none shadow-2xl"
+                  className="h-8 rounded-none shadow-2xl float-right"
                   suffix={
                     <SearchOutlined
                       style={{
@@ -38,10 +39,10 @@ export default function Postedjobs(props) {
                   }
                 />
               </Col>
-              <Col xs={24} md={3}>
-                <Button className="flex rounded-sm" size="large">
+              <Col span={3} className="ml-2">
+                <Button className="flex rounded-sm float-right shadow-lg dark:!shadow-gray-400/10 text-black dark:!text-white dark:!bg-gray-400/20 dark:!border-gray-400/20" size="medium">
                   <img className="w-3 h-3 mt-1 mr-1" src={filter}></img>
-                  <span className="ml-q">Filter</span>
+                  <span className="ml-1">Filter</span>
                 </Button>
               </Col>
             </Row>
@@ -58,23 +59,23 @@ export default function Postedjobs(props) {
                 label: "Active Jobs",
                 children: (
                   <>
-                    <Row gutter={[16, 16]}>
+                    <Row gutter={[16, 16]} className="text-black dark:!text-white">
                       <Col xs={12} md={6}>
                         <Card
-                          className="card_title"
+                          className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
                           title={
                             <>
-                              <div className="flex">
+                              <div className="flex flex-col text-center text-black dark:!text-white">
                                 <div className="flex">
                                   <img
-                                    className="h-5 w-5 ml-1"
+                                    className="h-5 w-5"
                                     src={python}
                                   ></img>
                                   <span className="text-sm ml-1 font-normal">
                                     Python Developers
                                   </span>
                                 </div>
-                                <span className="text-sm font-light ml-2">
+                                <span className="text-sm font-light">
                                   #001
                                 </span>
                               </div>
@@ -82,16 +83,16 @@ export default function Postedjobs(props) {
                           }
                           actions={[
                             <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                              <span className="text-black dark:!text-white text-small">
+                                <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
+                              <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                            </div>
                           ]}
                         >
                           <Row>
-                            <Col span={24} className="m-auto text-center">
+                            <Col span={24} className="m-auto text-center text-black dark:!text-white">
                               <span className="text-sm">Senior Developers</span>
                               <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
                                 <h1 className="text-xl text-center font-bold text-[#0A66C2]">
@@ -107,20 +108,20 @@ export default function Postedjobs(props) {
                       </Col>
                       <Col xs={12} md={6}>
                         <Card
-                          className="card_title "
+                          className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
                           title={
                             <>
-                              <div className="flex ">
+                              <div className="flex flex-col text-center text-black dark:!text-white">
                                 <div className="flex">
                                   <img
-                                    className="h-5 w-5 ml-1"
+                                    className="h-5 w-5"
                                     src={Angular}
                                   ></img>
                                   <span className="text-sm ml-1 font-normal">
                                     Angular Developers
                                   </span>
                                 </div>
-                                <span className="text-sm font-light ml-2">
+                                <span className="text-sm font-light">
                                   #002
                                 </span>
                               </div>
@@ -128,16 +129,16 @@ export default function Postedjobs(props) {
                           }
                           actions={[
                             <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                              <span className="text-black dark:!text-white text-small">
+                                <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
+                              <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                            </div>
                           ]}
                         >
                           <Row>
-                            <Col span={24} className="m-auto text-center">
+                            <Col span={24} className="m-auto text-center text-black dark:!text-white">
                               <span className="text-sm">Senior Developers</span>
                               <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
                                 <h1 className="text-xl text-center font-bold  text-white">
@@ -153,20 +154,20 @@ export default function Postedjobs(props) {
                       </Col>
                       <Col xs={12} md={6}>
                         <Card
-                          className="card_title "
+                          className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
                           title={
                             <>
-                              <div className="flex ">
+                              <div className="flex flex-col text-center text-black dark:!text-white">
                                 <div className="flex">
                                   <img
-                                    className="h-5 w-5 ml-1"
+                                    className="h-5 w-5"
                                     src={java}
                                   ></img>
                                   <span className="text-sm ml-1 font-normal">
                                     Java Developers
                                   </span>
                                 </div>
-                                <span className="text-sm font-light ml-2">
+                                <span className="text-sm font-light">
                                   #003
                                 </span>
                               </div>
@@ -174,16 +175,16 @@ export default function Postedjobs(props) {
                           }
                           actions={[
                             <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
-                              </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
                           ]}
                         >
                           <Row>
-                            <Col span={24} className="m-auto text-center">
+                            <Col span={24} className="m-auto text-center text-black dark:!text-white">
                               <span className="text-sm">Senior Developers</span>
                               <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
                                 <h1 className="text-xl text-center font-bold  text-white">
@@ -199,17 +200,17 @@ export default function Postedjobs(props) {
                       </Col>
                       <Col xs={12} md={6}>
                         <Card
-                          className="card_title "
+                          className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
                           title={
                             <>
-                              <div className="flex ">
+                              <div className="flex flex-col text-center text-black dark:!text-white">
                                 <div className="flex">
                                   <img className="h-5 w-5 ml-1" src={UI}></img>
                                   <span className="text-sm ml-1 font-normal">
                                     UI/UX Developers
                                   </span>
                                 </div>
-                                <span className="text-sm font-light ml-2">
+                                <span className="text-sm font-light">
                                   #004
                                 </span>
                               </div>
@@ -217,16 +218,16 @@ export default function Postedjobs(props) {
                           }
                           actions={[
                             <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                              <span className="text-black dark:!text-white text-small">
+                                <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
+                              <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                            </div>
                           ]}
                         >
                           <Row>
-                            <Col span={24} className="m-auto text-center">
+                            <Col span={24} className="m-auto text-center text-black dark:!text-white">
                               <span className="text-sm">Senior Developers</span>
                               <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
                                 <h1 className="text-xl text-center font-bold  text-white">
@@ -249,190 +250,190 @@ export default function Postedjobs(props) {
                 label: "Inactive Jobs",
                 children: (
                   <>
-                    <Row gutter={[16, 16]}>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title"
-                          title={
-                            <>
+                  <Row gutter={[16, 16]} className="text-black dark:!text-white">
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
                               <div className="flex">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={python}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Python Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #001
+                                <img
+                                  className="h-5 w-5"
+                                  src={python}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Python Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #001
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold text-[#0A66C2]">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={Angular}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Angular Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #002
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold text-[#0A66C2]">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img
+                                  className="h-5 w-5"
+                                  src={Angular}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Angular Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #002
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={java}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Java Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #003
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img
+                                  className="h-5 w-5"
+                                  src={java}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Java Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #003
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img className="h-5 w-5 ml-1" src={UI}></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    UI/UX Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #004
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                          <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                          <span className="text-black dark:!text-white text-small">
+                            <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                          </span>
+                          <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                        </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img className="h-5 w-5 ml-1" src={UI}></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  UI/UX Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #004
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                    </Row>
-                  </>
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                  </Row>
+                </>
                 ),
               },
               {
@@ -440,191 +441,191 @@ export default function Postedjobs(props) {
                 label: "Completed Jobs",
                 children: (
                   <>
-                    <Row gutter={[16, 16]}>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title"
-                          title={
-                            <>
+                  <Row gutter={[16, 16]} className="text-black dark:!text-white">
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
                               <div className="flex">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={python}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Python Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #001
+                                <img
+                                  className="h-5 w-5"
+                                  src={python}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Python Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #001
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold text-[#0A66C2]">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={Angular}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Angular Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #002
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#D9E4EF] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold text-[#0A66C2]">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img
+                                  className="h-5 w-5"
+                                  src={Angular}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Angular Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #002
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img
-                                    className="h-5 w-5 ml-1"
-                                    src={java}
-                                  ></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    Java Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #003
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#73A1FB] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img
+                                  className="h-5 w-5"
+                                  src={java}
+                                ></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  Java Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #003
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                      <Col xs={12} md={6}>
-                        <Card
-                          className="card_title "
-                          title={
-                            <>
-                              <div className="flex ">
-                                <div className="flex">
-                                  <img className="h-5 w-5 ml-1" src={UI}></img>
-                                  <span className="text-sm ml-1 font-normal">
-                                    UI/UX Developers
-                                  </span>
-                                </div>
-                                <span className="text-sm font-light ml-2">
-                                  #004
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                          <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                          <span className="text-black dark:!text-white text-small">
+                            <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                          </span>
+                          <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                        </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#2F73A0] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                    <Col xs={12} md={6}>
+                      <Card
+                        className="card_title dark:!bg-gray-400/20 dark:!border-gray-400/20"
+                        title={
+                          <>
+                            <div className="flex flex-col text-center text-black dark:!text-white">
+                              <div className="flex">
+                                <img className="h-5 w-5 ml-1" src={UI}></img>
+                                <span className="text-sm ml-1 font-normal">
+                                  UI/UX Developers
                                 </span>
                               </div>
-                            </>
-                          }
-                          actions={[
-                            <div>
-                              <ArrowUpOutlined className="w-5" />
-                              <span className="text-black text-small">
-                                <span className="text-[#0A66C2]">28%</span>vs Last month
+                              <span className="text-sm font-light">
+                                #004
                               </span>
-                              <span className="text-black text-small font-light">  6 mins ago</span>
-                            </div>,
-                          ]}
-                        >
-                          <Row>
-                            <Col span={24} className="m-auto text-center">
-                              <span className="text-sm">Senior Developers</span>
-                              <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
-                                <h1 className="text-xl text-center font-bold  text-white">
-                                  258
-                                </h1>
-                              </div>
-                              <span className="text-sm mt-1">
-                                Total Applicants
-                              </span>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </Col>
-                    </Row>
-                  </>
-                ),
+                            </div>
+                          </>
+                        }
+                        actions={[
+                          <div>
+                            <ArrowUpOutlined className="w-5 text-black dark:!text-white " />
+                            <span className="text-black dark:!text-white text-small">
+                              <span className="text-[#0A66C2] mr-1 dark:!text-white">28%</span>vs Last month
+                            </span>
+                            <span className="text-black dark:!text-white text-small font-light">  6 mins ago</span>
+                          </div>
+                        ]}
+                      >
+                        <Row>
+                          <Col span={24} className="m-auto text-center text-black dark:!text-white">
+                            <span className="text-sm">Senior Developers</span>
+                            <div className="w-16 h-16 mx-auto mt-2 mb-2 bg-[#0A66C2] flex flex-col justify-center items-center">
+                              <h1 className="text-xl text-center font-bold  text-white">
+                                258
+                              </h1>
+                            </div>
+                            <span className="text-sm mt-1">
+                              Total Applicants
+                            </span>
+                          </Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                  </Row>
+                </>
+              ),
               },
             ]}
           />

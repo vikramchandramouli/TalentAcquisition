@@ -1,18 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode:"class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontSize: {
-      small: "0.7rem",
-      sm: "0.8rem",
-      base: "1rem",
-      xl: "1.25rem",
-      "2xl": "1.563rem",
-      "3xl": "1.953rem",
-      "4xl": "2.441rem",
-      "5xl": "3.052rem",
+    extend: {
+      colors:{
+        'custom-blue': 'rgb(0,85,255,1)',
+      },
+        backgroundImage: {
+          'card-blue': 'linear-gradient(74deg, rgb(10, 102, 194) 6.27%, rgb(89, 148, 206) 90.96%)',
+        },
     },
-    extend: {},
   },
   plugins: [],
 };

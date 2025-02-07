@@ -1,46 +1,123 @@
-import React from 'react';
-import { Layout,Input,Row,Col } from 'antd';
-import { SearchOutlined  } from '@ant-design/icons'
-import logo from "../../assets/logo.png"
-import day from "../../assets/day.png"
-import surface from "../../assets/surface.png"
-import setting from "../../assets/setting.png"
-import notification from "../../assets/notification.png"
-import message from "../../assets/message.png"
-import user from "../../assets/user.png"
+import React, { useEffect, useState } from "react";
+import { Row, Col, Dropdown } from "antd";
+import { LuSunMoon, LuMoonStar } from "react-icons/lu";
+import darkIcon from "../../assets/Icon.png";
+import lightIcon from "../../assets/Icon_white.png";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
+import { AiOutlineMenuFold } from "react-icons/ai";
 
-const { Header, Content, Footer } = Layout;
+
+
 const Headers = () => {
-    const Search=Input
+  const [isOverflow, setIsOverFlow] = useState(false);
+  const [theme, setTheme] = useState(false);
+  const [themeColor, setThemeColor] = useState(
+    localStorage.getItem("theme") || "light"
+  );
+
+  const items=[{
+    label: (<IoIosNotificationsOutline size={23} className="!text-black dark:!text-white"/>)
+  },{
+    label: (<IoSettingsOutline size={21} className="!text-black dark:!text-white"/>)
+  },{
+    label: (<FaRegUser size={21} className="!text-black dark:!text-white"/>)
+  }]
+
+  const checkOverFlow = () => {
+    if (window.innerWidth < 1052) {
+      setIsOverFlow(true);
+    } else {
+      setIsOverFlow(false);
+    }
+  };
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", themeColor === "dark");
+    setTheme(themeColor === "light" ? false : true);
+    localStorage.setItem("theme", themeColor);
+  }, [themeColor]);
+
+
+  useEffect(() => {
+    checkOverFlow();
+    window.addEventListener("resize", checkOverFlow);
+    ///useEffect runs when dependencies change, and when a component unmounts,
+    /// it cleans up by running the function returned inside useEffect
+    return () => window.removeEventListener("resize", checkOverFlow);
+  }, []);
+
   return (
     <>
-    <Row>
-      <Header className="sticky top-0 z-10 w-full flex items-center bg-white shadow-2xl !p-0">
-        <Col span={18} className="flex">
-        <img src={logo} className="w-25 h-10 me-10 ms-2"></img>
-    <Search
-      placeholder="Search"
-      className="w-64 ms-10 rounded-none shadow-2xl"
-      suffix={
-        <SearchOutlined 
-          style={{
-            color: 'rgba(0,0,0,.45)',
-          }}
-        />
-      }
-    />
-      </Col>
-      <Col span={6} className="flex">
-    <img src={day} className="w-5 h-5 m-5"></img>
-    <img src={surface} className="w-5 h-5 m-5"></img>
-    <img src={message} className="w-5 h-5 m-5"></img>
-    <img src={notification} className="w-5 h-5 m-5"></img>
-    <img src={setting} className="w-5 h-5 m-5"></img>
-    <img src={user} className="w-5 h-5 m-5"></img>
-    </Col>  
-      </Header>
+      <Row gutter={[16, 16]}>
+        <Col span={24}>
+          <Row gutter={[16, 16]}>
+            <Col span={20}>
+              <Row className="m-4">
+                {theme?<img src={lightIcon} className="h-10 w-10"></img>:<img src={darkIcon} className="h-10 w-10"></img>}
+                <span className="font-bold text-2xl dark:!text-white">
+                  Workforce Acquisition
+                </span>
+              </Row>
+            </Col>
+            <Col span={4}>
+              {!isOverflow ? (
+                <>
+                <ul
+                  className={`inline-flex gap-2 mt-3 overflow-hidden whitespace-nowrap text-ellipsis
+               ${isOverflow ? "overflow-hidden" : ""}`}
+                >
+                  <li
+                    className="p-3 !text-black dark:!text-white text-center cursor-pointer "
+                    onClick={() => {
+                      setTheme(!theme);
+                      setThemeColor(themeColor === "light" ? "dark" : "light");
+                    }}
+                  >
+                    {!theme ? <LuMoonStar size={21} /> : <LuSunMoon size={21} />}
+                  </li>
+                  <li
+                    className="p-3 !text-black dark:!text-white text-center cursor-pointer "
+                  >
+                    <IoIosNotificationsOutline size={23}/>
+                  </li>
+                  <li
+                    className="p-3 !text-black dark:!text-white text-center cursor-pointer "
+                  >
+                    <IoSettingsOutline size={21}/>
+                  </li>
+                  <li
+                    className="p-3 !text-black dark:!text-white text-center cursor-pointer "
+                  >
+                    <FaRegUser size={21}/>
+                  </li>
+                  </ul>
+                </>
+              ) : (
+                <>
+                <div className="inline-flex float-right p-3">
+                <span
+                    className="p-3 !text-black dark:!text-white text-center cursor-pointer "
+                    onClick={() => {
+                      setTheme(!theme);
+                      setThemeColor(themeColor === "light" ? "dark" : "light");
+                    }}
+                  >
+                    {!theme ? <LuMoonStar size={21} /> : <LuSunMoon size={21} />}
+                  </span>
+                  <div className="p-3"><Dropdown menu={{items}} arrow>
+                    <AiOutlineMenuFold size={23} className="text-black dark:!text-white cursor-pointer"/>
+                  </Dropdown></div>
+                </div>
+                </>
+              )}
+
+            </Col>
+          </Row>
+        </Col>
       </Row>
-      </>
+    </>
   );
 };
 export default Headers;

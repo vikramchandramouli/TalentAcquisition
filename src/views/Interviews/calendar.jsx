@@ -5,8 +5,8 @@ export default function CalendarInfo(props) {
 
     return (
         <>
-        <div className="rounded-none shadow-2xl">
-             <Calendar fullscreen={false}  />
+        <div className="rounded-sm shadow-2xl w-auto">
+             <Calendar fullscreen={false} />
              </div>
         </>
     )

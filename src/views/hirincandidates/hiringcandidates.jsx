@@ -20,13 +20,13 @@ export default function Hiringcandidates(props) {
                <img src={user3}></img>
                </div>
              </Col>
-             <Col span={13}>
-             <span className='text-md font-light'>John Doe</span>
+             <Col span={14} className='ml-2'>
+             <span className='text-md font-medium'>John Doe</span>
                <h1 className='font-light text-small mt-1'>Senior Python Developer</h1>
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
-             <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
+             <Col span={3}>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -34,13 +34,13 @@ export default function Hiringcandidates(props) {
                <img src={user5}></img>
                </div>
              </Col>
-             <Col span={13}>
-             <span className='text-md font-light'>John Doe</span>
+             <Col span={14} className='ml-2'>
+             <span className='text-md font-medium'>John Doe</span>
                <h1 className='font-light text-small mt-1'>Senior Python Developer</h1>
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
-             <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
+             <Col span={3}>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -48,13 +48,13 @@ export default function Hiringcandidates(props) {
                <img src={user4}></img>
                </div>
              </Col>
-             <Col span={13}>
-             <span className='text-md font-light'>John Doe</span>
+             <Col span={14} className='ml-2'>
+             <span className='text-md font-medium'>John Doe</span>
                <h1 className='font-light text-small mt-1'>Senior Python Developer</h1>
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
-             <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
+             <Col span={3}>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -62,13 +62,13 @@ export default function Hiringcandidates(props) {
                <img src={user5}></img>
                </div>
              </Col>
-             <Col span={13}>
-             <span className='text-md font-light'>John Doe</span>
+             <Col span={14} className='ml-2'>
+             <span className='text-md font-medium'>John Doe</span>
                <h1 className='font-light text-small mt-1'>Senior Python Developer</h1>
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
-             <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
+             <Col span={3}>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
              </Col>
              <Col span={24} className="h-4"></Col>
              <Col span={6}>
@@ -76,13 +76,13 @@ export default function Hiringcandidates(props) {
                <img src={user5}></img>
                </div>
              </Col>
-             <Col span={13}>
-             <span className='text-md font-light'>John Doe</span>
+             <Col span={14} className='ml-2'>
+             <span className='text-md font-medium'>John Doe</span>
                <h1 className='font-light text-small mt-1'>Senior Python Developer</h1>
                <h1 className='text-small mt-1 font-light'>Hired by: Stella</h1>
              </Col>
-             <Col span={5}>
-               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2] ml-2">Details</Button>
+             <Col span={3}>
+               <Button className="text-[#0A66C2] text-sm rounded-sm border-[#0A66C2]">Details</Button>
              </Col>
 
          </Row>

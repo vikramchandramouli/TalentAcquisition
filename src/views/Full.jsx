@@ -13,50 +13,49 @@ import Candidatestatus from "./candidatestatus/candidatestatus";
 export default function Full(props) {
   return (
     <>
-      <Row className="container mx-10">
-        <Col xs={24} md={24}>
-          <h1 className="text-xl">HR Employee</h1>
-        </Col>
-        <Col xs={24} md={24}>
-          <p className="text-sm mt-3">
-            Enjoy your selecting potential candidates Tracking and Management
-            System.
-          </p>
-        </Col>
-        <Col xs={24} md={24} className="h-10"></Col>
-        <Col xs={24} md={14}>
-          <Application />
-        </Col>
-        <Col xs={24} md={0} className="h-8"></Col>
-        <Col xs={24} md={9}>
-          <Assessment />
-        </Col>
-        <Col xs={24} md={24} className="h-4"></Col>
-        <Col xs={24} md={16}>
-          <InterviewInfo />
-          <Col xs={24} md={24} className="h-4"></Col>
-          <Postedjobs />
-          <Col xs={24} md={24} className="h-4"></Col>
-          <Candidatestatus />
-        </Col>
-        <Col xs={24} md={7} className="ml-4">
-          <Col xs={23}>
-            {" "}
-            <CalendarInfo />
-          </Col>
-          <Col span={23}>
-            {" "}
-            <Upcomings />
-          </Col>
-          <Col span={23}>
-            <Activity />
-          </Col>
-          <Col span={23}>
-            {" "}
-            <Hiringcandidates />
-          </Col>
-        </Col>
+    <div className="flex justify-center !bg-white dark:!bg-black text-black dark:!text-white">
+      <Row gutter={[16,16]} className="!mx-[2rem]">
+            <Col span={24} className="p-4">
+              <h1 className="text-xl">HR Employee</h1>  
+              <p className="text-sm">
+                Enjoy your selecting potential candidates Tracking and
+                Management System.
+              </p>
+            </Col>
+            <Row className="my-2" gutter={[16,16]}>
+            <Col xs={24} md={14}>
+              <Application />
+            </Col>
+            <Col xs={24} md={10}>
+              <Assessment />
+            </Col>
+            </Row>
+            <Col xs={24} md={16} className="!p-0">
+              <InterviewInfo />
+              <Col xs={24} md={24} className="h-4"></Col>
+              <Postedjobs />
+              <Col xs={24} md={24} className="h-4"></Col>
+              <Candidatestatus />
+            </Col>
+            <Col xs={24} md={8}>
+              <Col xs={24} className="!p-0">
+                {" "}
+                <CalendarInfo />
+              </Col>
+              <Col span={24}>
+                {" "}
+                <Upcomings />
+              </Col>
+              <Col span={24}>
+                <Activity />
+              </Col>
+              <Col span={24}>
+                {" "}
+                <Hiringcandidates />
+              </Col>
+            </Col>
       </Row>
+      </div>
     </>
   );
 }

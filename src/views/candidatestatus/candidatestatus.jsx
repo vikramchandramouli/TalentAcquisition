@@ -9,13 +9,21 @@ import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied
 export default function Candidatestatus(props) {
   const Search = Input;
   const [rowData, setRowData] = useState([
-    { Jobid: "#001", Name: "John Doe", Position: "Designer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
-    { Jobid: "#002", Name: "John Smith", Position: "Angular Developer", level1: "6/10",level2:"5/10",level3:"5/10",level4:"8/10",totalmarks:"24/40",status:"Hired",action:"" },
-    { Jobid: "#003", Name: "Johnson Smith", Position: "Python Developer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
-    { Jobid: "#004", Name: "Stella", Position: "Python Developer", level1: "6/10",level2:"2/10",level3:"",level4:"",totalmarks:"",status:"Active",action:"" },
-    { Jobid: "#005", Name: "Randy", Position: "IOS Developer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
-    { Jobid: "#006", Name: "John Doe", Position: "Junior Designer", level1: "6/10",level2:"7/10",level3:"3/10",level4:"...",totalmarks:"...",status:"Active",action:"" },
-  ]);
+    { Jobid: "#001", Name: "John Doe", Position: "Designer", level1: "6/10", level2: "7/10", level3: "3/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#002", Name: "John Smith", Position: "Angular Developer", level1: "6/10", level2: "5/10", level3: "5/10", level4: "8/10", totalmarks: "24/40", status: "Hired", action: "" },
+    { Jobid: "#003", Name: "Johnson Smith", Position: "Python Developer", level1: "6/10", level2: "7/10", level3: "3/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#004", Name: "Stella", Position: "Python Developer", level1: "6/10", level2: "2/10", level3: "", level4: "", totalmarks: "", status: "Active", action: "" },
+    { Jobid: "#005", Name: "Randy", Position: "IOS Developer", level1: "6/10", level2: "7/10", level3: "3/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#006", Name: "John Doe", Position: "Junior Designer", level1: "6/10", level2: "7/10", level3: "3/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#007", Name: "Alice Brown", Position: "React Developer", level1: "8/10", level2: "7/10", level3: "9/10", level4: "6/10", totalmarks: "30/40", status: "Hired", action: "" },
+    { Jobid: "#008", Name: "Michael Johnson", Position: "Data Analyst", level1: "7/10", level2: "6/10", level3: "5/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#009", Name: "Sophia Williams", Position: "Full Stack Developer", level1: "9/10", level2: "8/10", level3: "7/10", level4: "9/10", totalmarks: "33/40", status: "Hired", action: "" },
+    { Jobid: "#010", Name: "Liam Martinez", Position: "Backend Developer", level1: "7/10", level2: "8/10", level3: "6/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#011", Name: "Olivia Wilson", Position: "UI/UX Designer", level1: "8/10", level2: "7/10", level3: "9/10", level4: "6/10", totalmarks: "30/40", status: "Hired", action: "" },
+    { Jobid: "#012", Name: "Ethan Anderson", Position: "DevOps Engineer", level1: "6/10", level2: "5/10", level3: "7/10", level4: "...", totalmarks: "...", status: "Active", action: "" },
+    { Jobid: "#013", Name: "Emma Thomas", Position: "Java Developer", level1: "8/10", level2: "7/10", level3: "8/10", level4: "9/10", totalmarks: "32/40", status: "Hired", action: "" },
+    { Jobid: "#014", Name: "Daniel White", Position: "Android Developer", level1: "7/10", level2: "6/10", level3: "5/10", level4: "...", totalmarks: "...", status: "Active", action: "" }
+]);
 
   const [colDefs, setColDefs] = useState([
     { field: "Jobid",headerName:"Job ID" },
@@ -40,49 +48,48 @@ export default function Candidatestatus(props) {
   return (
     <>
       <Card
-        className="candidate"
+        className="!shadow-sm [#c4c4b9] bg-white dark:!bg-gray-400/20 dark:!border-gray-400/20 "
         title={
-          <>
-            <Row>
-              <Col span={24} className="h-6"></Col>
-              <Col xs={8} md={6}>
-                <h1 className="text-xl font-normal">Candidate Status</h1>
-              </Col>
-              <Col xs={5} md={4} className="mt-1">
-                <div className="inline-block border-b-2 border-[#0A66C2] font-medium text-[#0A66C2]">
-                  View All
-                </div>
-              </Col>
-              <Col md={3}></Col>
-              <Col xs={8} md={8}>
-                <Search
-                  placeholder="Search"
-                  className="w-64 h-10 rounded-none shadow-xl"
-                  suffix={
-                    <SearchOutlined
-                      style={{
-                        color: "rgba(0,0,0,.45)",
-                      }}
-                    />
-                  }
-                />
-              </Col>
-              <Col xs={24} md={3}>
-                <Button className="flex rounded-sm" size="large">
+            <>
+              <Row className="m-2 text-black dark:!text-white" gutter={[16,16]}>
+                <Col span={24} className="h-3"></Col>
+                <Col  span={5}>
+                  <span className="text-xl">Candidate Status</span>
+                </Col>
+                {/* <Col span={1}></Col> */}
+                <Col  span={8} >
+                  {/* <button className="mt-1 font-normal tracking-wide  border-b-2 border-[#0A66C2] text-[#0A66C2] cursor-pointer">
+                    View All
+                  </button> */}
+                </Col>
+                <Col span={7}>
+                  <Search
+                    placeholder="Search"
+                    className="h-8 rounded-none shadow-2xl float-right"
+                    suffix={
+                      <SearchOutlined
+                        style={{
+                          color: "rgba(0,0,0,.45)",
+                        }}
+                      />
+                    }
+                  />
+                </Col>
+                <Col span={3} className="ml-2">
+                <Button className="flex rounded-sm float-right shadow-lg dark:!shadow-gray-400/10 text-black dark:!text-white dark:!bg-gray-400/20 dark:!border-gray-400/20">
                   <img className="w-3 h-3 mt-1 mr-1" src={filter}></img>
-                  <span className="ml-q">Filter</span>
+                  <span className="ml-1">Filter</span>
                 </Button>
-              </Col>
-              <Col span={24} className="h-8"></Col>
-            </Row>
-          </>
-        }
+                </Col>
+              </Row>
+            </>
+          }
       >
         <Row>
           <Col span={24}>
             <div
               className="ag-theme-quartz" // applying the grid theme
-              style={{ height: 420 }} // the grid will fill the size of the parent container
+              style={{ height: 450 }} // the grid will fill the size of the parent container
             >
               <AgGridReact rowData={rowData} columnDefs={colDefs} autoSizeStrategy={autoSizeStrategy} />
             </div>
